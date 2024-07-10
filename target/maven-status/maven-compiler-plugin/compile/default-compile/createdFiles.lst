@@ -1,0 +1,7 @@
+me\imhartash\playerauth\Commands\RegisterCommand.class
+me\imhartash\playerauth\Utils\Encryptor.class
+me\imhartash\playerauth\PlayerAuth.class
+me\imhartash\playerauth\Utils\DataBase.class
+me\imhartash\playerauth\Events\JoinPlayerEvent.class
+me\imhartash\playerauth\Commands\LoginCommand.class
+me\imhartash\playerauth\Utils\ColoredChat.class

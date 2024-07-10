@@ -1,0 +1,3 @@
+# Login / Password
+maxPasswordLength: 16
+minPasswordLength: 6

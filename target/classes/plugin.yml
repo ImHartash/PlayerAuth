@@ -1,0 +1,14 @@
+name: PlayerAuth
+version: '1.0'
+main: me.imhartash.playerauth.PlayerAuth
+api-version: '1.20'
+commands:
+  login:
+    usage: /<command> password
+    aliases:
+      - l
+
+  register:
+    usage: /<command> password password
+    aliases:
+      - reg

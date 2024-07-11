@@ -7,10 +7,10 @@ import java.util.regex.Pattern;
 
 public class ColoredChat {
 
-    private final Pattern HEX_PATTERN = Pattern.compile("&#([a-f0-9]{6})");
-    private final char COLOR_CHAR = '&';
+    private static final Pattern HEX_PATTERN = Pattern.compile("&#([a-f0-9]{6})");
+    private static final char COLOR_CHAR = '&';
 
-    private String hex_convert(String message) {
+    private static String hex_convert(String message) {
         Matcher matcher = HEX_PATTERN.matcher(message);
         StringBuffer buffer = new StringBuffer(message.length() + 4 * 8);
 
@@ -27,7 +27,7 @@ public class ColoredChat {
         return matcher.appendTail(buffer).toString();
     }
 
-    public String convert(String message) {
+    public static String convert(String message) {
         String correct_message = hex_convert(message);
         return ChatColor.translateAlternateColorCodes(COLOR_CHAR, correct_message);
     }

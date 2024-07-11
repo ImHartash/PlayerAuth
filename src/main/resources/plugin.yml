@@ -12,3 +12,6 @@ commands:
     usage: /<command> password password
     aliases:
       - reg
+
+  playerauth:
+    usage: /<command> actions

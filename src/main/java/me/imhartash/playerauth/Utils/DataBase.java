@@ -54,7 +54,7 @@ public class DataBase {
 
         try {
 
-            String sql_query = "UPDATE players_data" +
+            String sql_query = "UPDATE players_data " +
                     "SET %s = '%s' WHERE player_name = '%s';";
             sql_query = String.format(sql_query, data_name, data, player_name);
 
@@ -76,21 +76,14 @@ public class DataBase {
             String sql_query = "SELECT %s FROM players_data WHERE player_name = '%s';";
             sql_query = String.format(sql_query, data_table, player_name);
             Statement statement = conn.createStatement();
-
             ResultSet result = statement.executeQuery(sql_query);
+            String dataValue = null;
 
-            if (result.next()) {
+            if (result.next())
+                dataValue = result.getString(data_table);
 
-                statement.close();
-                return result.getString(data_table);
-
-            }
-            else {
-
-                statement.close();
-                return null;
-
-            }
+            statement.close();
+            return dataValue;
 
         } catch (SQLException e) {
             e.printStackTrace();

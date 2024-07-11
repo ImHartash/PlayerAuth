@@ -1,0 +1,19 @@
+wrong_password_kick: "&cYou've spent all your attempts..."
+wrong_password: "&cIncorrect password. Try again..."
+success_registered: "&fYou have successfully &dregistered&f!"
+success_logged_in: "&fYou have successfully &dlogged in&f!"
+
+player_registered: "&cIt looks like you have already registered..."
+player_not_registered: "&cPlayer not registered."
+wrong_register_length: "&cThe password length should be between 6 and 16 characters..."
+wrong_passwords: "&cPasswords must match!"
+
+attempts_more: "&cWrong password! You have &f%attempts%&c more attempts to log in!"
+
+login_message: "&fYou need to login on this server. Enter &d/login <Your Password> &fto continue."
+register_message: "&fYou need to register on this server. Enter &d/register <Password> <Password> &fto continue."
+
+no_permission: "&c[!] You don't have enough permissions to execute this command!"
+using_command_not_auth: "&c[!] You need to be authorized to using commands!"
+
+success_reloaded: "&aReload Success!"

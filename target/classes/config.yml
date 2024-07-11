@@ -1,3 +1,16 @@
 # Login / Password
 maxPasswordLength: 16
 minPasswordLength: 6
+
+attempts_to_login: 3
+
+# ONLY 16 SYMBOLS (It's need to crypt passwords)
+key_flag: "E9DWxkF3fQgeWFBj"
+iv_flag: "TujCywe5XCdJ87KS"
+
+# Session settings
+sessions:
+  # Enable/Disable sessions
+  enable: true
+  # Stay time (in hours)
+  time: 12

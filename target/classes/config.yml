@@ -4,13 +4,13 @@ minPasswordLength: 6
 
 attempts_to_login: 3
 
-# ONLY 16 SYMBOLS (It's need to crypt passwords)
-key_flag: "E9DWxkF3fQgeWFBj"
-iv_flag: "TujCywe5XCdJ87KS"
+# ONLY 16 CHARACTERS or empty to change it to the default value (It's need to crypt passwords)
+key_flag: ""
+iv_flag: ""
 
 # Session settings
 sessions:
   # Enable/Disable sessions
-  enable: true
+  enabled: true
   # Stay time (in hours)
   time: 12

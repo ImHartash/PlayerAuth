@@ -17,3 +17,5 @@ no_permission: "&c[!] You don't have enough permissions to execute this command!
 using_command_not_auth: "&c[!] You need to be authorized to using commands!"
 
 success_reloaded: "&aReload Success!"
+
+session_saved: "&fYour &dsession &fhas been saved successfully!"

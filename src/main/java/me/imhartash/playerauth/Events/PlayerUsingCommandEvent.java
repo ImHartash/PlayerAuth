@@ -13,6 +13,8 @@ public class PlayerUsingCommandEvent implements Listener {
     @EventHandler
     public void onCommand(PlayerCommandPreprocessEvent event) {
         Player player = event.getPlayer();
+        if (PlayerAuth.auth_players.contains(player)) return;
+
         String message = event.getMessage();
 
         if (!(message.startsWith("/login") || message.startsWith("/l") ||

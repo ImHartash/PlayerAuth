@@ -26,7 +26,7 @@ public class LoginCommand implements CommandExecutor {
 
         String user_password = args[0];
         String db_password = Encryptor.decryptText(
-                DataBase.get_data("player_password", send_player.getName())
+                DataBase.get_data("player_password", Encryptor.encryptString(send_player.getName()))
         );
 
         if (!(db_password.equals(user_password))) {
@@ -36,6 +36,8 @@ public class LoginCommand implements CommandExecutor {
                 send_player.kickPlayer(ColoredChat.convert(Objects.requireNonNull(PlayerAuth.messagesConfig.getString("wrong_password_kick"))));
                 return true;
             }
+
+            players_attempts.put(send_player, current_attempts);
 
             String message = ColoredChat.convert(Objects.requireNonNull(PlayerAuth.messagesConfig.getString("attempts_more")).replace(
                     "%attempts%", String.valueOf(current_attempts)

@@ -18,26 +18,29 @@ public class PluginCommand implements CommandExecutor {
             return true;
         }
 
-        if (strings[0].equals("changepassword")) {
-            String playerName = strings[1];
-            String newPassword = strings[2];
+        switch (strings[0]) {
+            case "changepassword":
+                String playerName = strings[1];
+                String newPassword = strings[2];
 
-            if (DataBase.get_data("id", Encryptor.encryptString(playerName)) == null) {
-                commandSender.sendMessage(ColoredChat.convert(PlayerAuth.messagesConfig.getString("player_not_registered")));
+                if (DataBase.get_data("id", Encryptor.encryptString(playerName)) == null) {
+                    commandSender.sendMessage(ColoredChat.convert(PlayerAuth.messagesConfig.getString("player_not_registered")));
+                    return true;
+                }
+
+                DataBase.set_data("player_password", Encryptor.encryptString(newPassword), Encryptor.encryptString(playerName));
+                commandSender.sendMessage(ChatColor.GREEN + "Success!");
                 return true;
-            }
-
-            DataBase.set_data("player_password", newPassword, Encryptor.encryptString(playerName));
-        } else if (strings[0].equals("reload")) {
-            PlayerAuth.plugin.reloadConfig();
-            commandSender.sendMessage(ColoredChat.convert(PlayerAuth.messagesConfig.getString("success_reload")));
-            return true;
-        } else if (strings[0].equals("registered")) {
-            commandSender.sendMessage(ColoredChat.convert("&5Auth players:"));
-            for (Player player : PlayerAuth.auth_players) {
-                commandSender.sendMessage(player.getName());
-            }
-            return true;
+            case "reload":
+                PlayerAuth.plugin.reloadConfig();
+                commandSender.sendMessage(ColoredChat.convert(PlayerAuth.messagesConfig.getString("success_reloaded")));
+                return true;
+            case "registered":
+                commandSender.sendMessage(ColoredChat.convert("&dAuth players:"));
+                for (Player player : PlayerAuth.auth_players) {
+                    commandSender.sendMessage(player.getName());
+                }
+                return true;
         }
 
         return false;

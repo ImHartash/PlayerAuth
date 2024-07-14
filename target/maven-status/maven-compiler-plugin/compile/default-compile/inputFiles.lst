@@ -2,7 +2,9 @@ D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Events\PlayerUsingCo
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\PlayerAuth.java
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Utils\Encryptor.java
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Commands\RegisterCommand.java
+D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Commands\Console\PluginTabCompleter.java
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Commands\LoginCommand.java
+D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Commands\Console\PluginCommand.java
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Utils\DataBase.java
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Events\JoinPlayerEvent.java
 D:\Plugins\PlayerAuth\src\main\java\me\imhartash\playerauth\Events\MovePlayerEvent.java

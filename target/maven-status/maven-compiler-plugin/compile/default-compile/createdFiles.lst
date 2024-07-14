@@ -6,6 +6,7 @@ me\imhartash\playerauth\Commands\Console\PluginCommand.class
 me\imhartash\playerauth\Utils\DataBase.class
 me\imhartash\playerauth\Utils\ColoredChat.class
 me\imhartash\playerauth\Events\MovePlayerEvent.class
+me\imhartash\playerauth\Events\InventoryEvents.class
 me\imhartash\playerauth\Events\JoinPlayerEvent.class
 me\imhartash\playerauth\Commands\LoginCommand.class
 me\imhartash\playerauth\Commands\Console\PluginTabCompleter.class
